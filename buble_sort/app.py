@@ -1,18 +1,17 @@
-def buble_sort(items):
+def bubble_sort(unsorted_list):
+    # Iterate over the list for the required number of passes
+    for pass_num in range(1, len(unsorted_list)):
+        # Iterate over the list from the last element to the first
+        for current_index in range(len(unsorted_list) - 1, 0, -1):
+            # Compare the current element with its previous element
+            if unsorted_list[current_index] < unsorted_list[current_index - 1]:
+                # Swap the elements if they are in the wrong order
+                current_value, previous_value = unsorted_list[current_index], unsorted_list[current_index - 1]
+                unsorted_list[current_index], unsorted_list[current_index - 1] = previous_value, current_value
 
-    for _ in range(1, len(items) + 1):
-        for item_atual in range(len(items) -1, -1, -1):
-            if items[item_atual] < items[item_atual - 1]:
-                ultimo_valor, anterior_valor = items[item_atual], items[item_atual - 1]
-                if item_atual - 1 < 0:
-                    break
-                items[item_atual] = anterior_valor
-                items[item_atual - 1]  = ultimo_valor
-
-    return items
+    return unsorted_list
 
 
-lista_n_ordenada = [10,2,5,4,3,1,0,8,9]
+unsorted_list = [10,2,5,4,3,1,0,8,9]
 
-lista_ordenada = buble_sort(lista_n_ordenada)
-print(lista_ordenada)
+sorted_list = buble_sort(unsorted_list)
