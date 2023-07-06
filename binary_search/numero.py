@@ -26,4 +26,4 @@ def linear_search(list, item):
     return None
 
 
-binary_search([item for item in range(0,1000), 100)
+binary_search([item for item in range(0,1000)], 100)

@@ -14,4 +14,4 @@ def bubble_sort(unsorted_list):
 
 unsorted_list = [10,2,5,4,3,1,0,8,9]
 
-sorted_list = buble_sort(unsorted_list)
+sorted_list = bubble_sort(unsorted_list)
